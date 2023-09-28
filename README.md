@@ -332,3 +332,6 @@ Defects4J uses a semantic versioning scheme (`major`.`minor`.`patch`):
 License
 ---------
 MIT License, see [`license.txt`](https://github.com/rjust/defects4j/blob/master/license.txt) for more information.
+
+sudo apt-get install gcc
+sudo apt-get install libdbi-perl

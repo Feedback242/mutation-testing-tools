@@ -79,7 +79,7 @@ work_dir="$TMP_DIR/$PID"
 mkdir -p $work_dir
 
 # Clean working directory
-rm -rf "$work_dir/*"
+#rm -rf "$work_dir/*"
 
 for bid in $(echo $BUGS); do
     # Skip all bug ids that do not exist in the active-bugs csv

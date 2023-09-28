@@ -1,0 +1,2 @@
+org/jfree/chart/renderer/category/junit/IntervalBarRendererTests.class
+org/jfree/data/category/junit/DefaultIntervalCategoryDatasetTests.class
