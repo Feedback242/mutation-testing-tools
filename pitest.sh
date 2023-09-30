@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 unset $PATH
 unset $CLASSPATH
-export PATH=$PATH:~/IdeaProjects/defects4j/framework/bin
 HERE=$(cd `dirname $0` && pwd)
+export PATH=$PATH:$HERE/framework/bin
 
 # Import helper subroutines and variables, and init Defects4J
 source "$HERE/test.include" || exit 1
@@ -55,7 +55,7 @@ _run_project(){
     classes="${target_classes//./\/}"
     echo $directory/$source_dir
     echo $first_line
-    lib=~/IdeaProjects/defects4j/pitest
+    lib=$HERE/pitest
     CLASSPATH=$(find $directory/lib -type f -name "*.jar" -printf "%p:" | sed 's/:$//')
     export CLASSPATH=$(find $lib -type f -name "*.jar" -printf "%p:" | sed 's/:$//'):$CLASSPATH
     echo $CLASSPATH

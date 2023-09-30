@@ -12,7 +12,7 @@ HERE=$(cd `dirname $0` && pwd)
 source "$HERE/test.include" || exit 1
 init
 
-export PATH=$PATH:~/IdeaProjects/defects4j/framework/bin
+export PATH=$PATH:$HERE/framework/bin
 
 
 
@@ -57,16 +57,16 @@ checkoutandcompile(){
 	for i in  $@
 		do
 		echo $subject $i
-			#_set_vars $subject $i"b"
-			_set_vars $subject $i"f"
+			_set_vars $subject $i"b"
+			#_set_vars $subject $i"f"
 
 		done;
 }
 
 
-#checkoutandcompile Chart 2 5 6 8 11 16 18 22 24
+checkoutandcompile Chart 2 5 6 8 11 16 18 22 24
 #checkoutandcompile Closure
-checkoutandcompile Lang 5 7 11 12 16 24
+#checkoutandcompile Lang 5 7 11 12 16 24
 #checkoutandcompile Math 4 6 22 27 31 102 105
 #checkoutandcompile Mockito
 #checkoutandcompile Time 1 2 5 8 9 12 15 17 27

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-export PATH=$PATH:~/IdeaProjects/defects4j/framework/bin
-HERE=$(cd `dirname $0` && pwd)
 
+HERE=$(cd `dirname $0` && pwd)
+export PATH=$PATH:$HERE/framework/bin
 # Import helper subroutines and variables, and init Defects4J
 source "$HERE/test.include" || exit 1
 
@@ -41,9 +41,10 @@ _run_project(){
 
 }
 
-#_run_project Chart
+
+_run_project Chart
 #_run_project Time
-_run_project Lang
+#_run_project Lang
 #_run_project Math
 
 

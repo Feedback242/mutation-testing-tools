@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 unset CLASSPATH
-
-export CLASSPATH=~/IdeaProjects/defects4j/mujava/mujava.jar:/home/rein/IdeaProjects/defects4j/mujava/openjava.jar:/lib/jvm/java-8-openjdk-amd64/lib/tools.jar:/home/rein/IdeaProjects/defects4j/mujava/junit-4.12.jar:/home/rein/IdeaProjects/defects4j/mujava/hamcrest-core-1.3.jar:/home/rein/IdeaProjects/defects4j/mujava/commons-io-2.13.0.jar:$CLASSPATH
-export PATH=$PATH:~/IdeaProjects/defects4j/framework/bin
 HERE=$(cd `dirname $0` && pwd)
 
+export PATH=$PATH:$HERE/framework/bin
 # Import helper subroutines and variables, and init Defects4J
 source "$HERE/test.include" || exit 1
 
@@ -32,7 +30,7 @@ _run_project(){
                     continue
                 fi
 
-        export CLASSPATH=/home/rein/Downloads/Time/Time-1f/mujava/mod_test.jar:/home/rein/IdeaProjects/defects4j/mujava/mujava.jar:/home/rein/IdeaProjects/defects4j/mujava/openjava.jar:/lib/jvm/java-8-openjdk-amd64/lib/tools.jar:/home/rein/IdeaProjects/defects4j/mujava/junit-4.12.jar:/home/rein/IdeaProjects/defects4j/mujava/hamcrest-core-1.3.jar:/home/rein/IdeaProjects/defects4j/mujava/commons-io-2.13.0.jar:$CLASSPATH
+        export CLASSPATH=$HERE/mujava/mod_test.jar:$HERE/mujava/mujava.jar:$HERE/mujava/openjava.jar:/lib/jvm/java-8-openjdk-amd64/lib/tools.jar:$HERE/mujava/junit-4.12.jar:$HERE/mujava/hamcrest-core-1.3.jar:$HERE/mujava/commons-io-2.13.0.jar:$CLASSPATH
         # Check if the "build" directory exists
         if [ -d "$directory/build" ]; then
             # Check if the "build" directory exists
