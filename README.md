@@ -49,7 +49,7 @@ On some platforms such as Windows, you might need to use `perl "fullpath"\defect
 where these instructions say to use `defects4j`.
 
 
-Runing Multiontesting
+Running Mutation Testing Tools
 ----------------
 
 1. run the script projectSetup.sh
